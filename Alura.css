@@ -1,0 +1,113 @@
+/* Global Styles */
+body {
+  background-color: black;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  color: white;
+  position: relative;
+}
+
+/* Logo Styles */
+.logo {
+  position: absolute;
+  top: 150px;
+  right: 30px;
+  max-width: 200px;
+  width: auto;
+  border-radius: 90px;
+}
+
+/* Container with the background image */
+.container {
+  background: url("https://64.media.tumblr.com/5bbe0b7a56faf208a8b7c07db701837c/tumblr_nmlu99EYRI1tiwiyxo1_1280.gif")
+    no-repeat center center/cover;
+  min-height: 140vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Content */
+.content {
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px 40px;
+  border-radius: 8px;
+}
+
+.content h2 {
+  margin-bottom: 20px;
+}
+
+/* Botão padrão */
+button {
+  background-color: blue;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.2em;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 90px;
+}
+
+button:hover {
+  background-color: #1abc9c;
+  border-radius: 240px;
+}
+
+/* Botões de Pedra, Papel, Tesoura */
+.opcao {
+  background-color: #444;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  margin: 10px;
+  font-size: 1.2em;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.opcao:hover {
+  background-color: #1abc9c;
+}
+
+/* Campo de idade com foco */
+#input-idade:focus {
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.8);
+  background-color: #333;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 10px;
+
+}
+/* Remove setinhas de número nos navegadores */
+input[type=number] {
+  appearance: textfield;             
+  -webkit-appearance: none;          
+  -moz-appearance: textfield;        
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+#botao-inicio {
+  background-color: blue;
+  padding: 15px 40px;
+  font-size: 1.4em;
+  border-radius: 50px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 0 20px rgba(0, 0, 255, 0.5);
+  transition: 0.3s ease;
+}
+
+
