@@ -1,97 +1,83 @@
 function mostrarCampoIdade() {
-    document.getElementById("botao-inicio").style.display = "none";
-    document.getElementById("bloco-idade").style.display = "block";
-  }
-  
-  function iniciarJogo() {
-    let idade = document.getElementById("input-idade").value;
-    let mensagem = document.getElementById("mensagem");
-  
-    if (idade === "") {
-      mensagem.textContent = "Digite sua idade.";
-      mensagem.style.color = "yellow";
-      return;
-    }
-  
-    idade = parseInt(idade);
-  
-    if (idade < 18) {
-      mensagem.textContent = "Proibido menores para tais atos.";
-      mensagem.style.color = "red";
-      return;
-    }
-  
-    if (idade >= 90) {
-      mensagem.textContent = "Tá de sacanagem, né? Você não pode cometer tais atos!";
-      mensagem.style.color = "orange";
-      return;
-    }
-  
-    document.getElementById("botoes-jogo").style.display = "block";
-    mensagem.textContent = "Idade verificada. Escolha sua jogada!";
-    mensagem.style.color = "white";
-  }
-  
-  function jogar(playerChoice) {
-    // Gera escolha aleatória do computador (1 a 3)
-    let computerChoice = Math.floor(Math.random() * 3) + 1;
-  
-    // Elementos da tela
-    let mensagem = document.getElementById("mensagem");
-    let compEscolha = document.getElementById("computador-escolha");
-  
-    // Dicionário para converter número em texto/emoji
-    const opcoes = {
-      1: "🪨 Pedra",
-      2: "📄 Papel",
-      3: "✂️ Tesoura"
-    };
-  
-    // Mostra o que o computador escolheu
-    compEscolha.textContent = "O computador escolheu: " + opcoes[computerChoice];
-  
-    // Verifica o resultado do jogo
-    if (playerChoice == computerChoice)
-    {
-      mensagem.textContent = "Empate!";
-      mensagem.style.color = "gray";
-    } 
-   
-    else if 
-    (
-      (playerChoice == 1 && computerChoice == 3) ||
-      (playerChoice == 2 && computerChoice == 1) ||
-      (playerChoice == 3 && computerChoice == 2)
-    ) 
-    
-    {
-      mensagem.textContent = "Você ganhou!";
-      mensagem.style.color = "lime";
-      //Som muito BOM!! YEPIIIII
-      document.getElementById("som-vitoria").play()
-    }
-    
-    else 
-    {
-      mensagem.textContent = "Você perdeu!";
-      mensagem.style.color = "red";
-    }
-  
+  document.getElementById("botao-inicio").style.display = "none";
+  document.getElementById("bloco-idade").style.display = "block";
 }
+
+function iniciarJogo() {
+  let idade = document.getElementById("input-idade").value;
+  let mensagem = document.getElementById("mensagem");
+
+  if (idade === "") {
+    mensagem.textContent = "Digite sua idade.";
+    mensagem.style.color = "yellow";
+    return;
+  }
+
+  idade = parseInt(idade);
+
+  if (idade < 18) {
+    mensagem.textContent = "Proibido menores para tais atos.";
+    mensagem.style.color = "red";
+    return;
+  }
+
+  if (idade >= 90) {
+    mensagem.textContent = "Tá de sacanagem, né? Você não pode cometer tais atos!";
+    mensagem.style.color = "orange";
+    return;
+  }
+
+  document.getElementById("botoes-jogo").style.display = "block";
+  mensagem.textContent = "Idade verificada. Escolha sua jogada!";
+  mensagem.style.color = "white";
+}
+
+function jogar(playerChoice) {
+  // Gera escolha aleatória do computador (1 a 3)
+  let computerChoice = Math.floor(Math.random() * 3) + 1;
+
+  // Elementos da tela
+  let mensagem = document.getElementById("mensagem");
+  let compEscolha = document.getElementById("computador-escolha");
+
+  // Dicionário para converter número em texto/emoji
+  const opcoes = {
+    1: "🗿 Pedra",
+    2: "📄 Papel",
+    3: "✂️ Tesoura"
+  };
+
+  // Mostra o que o computador escolheu
+  compEscolha.textContent = "O computador escolheu: " + opcoes[computerChoice];
+
+  // Verifica o resultado do jogo
+  if (playerChoice == computerChoice)
+  {
+    mensagem.textContent = "Empate!";
+    mensagem.style.color = "gray";
+  } 
+ 
+  else if 
+  (
+    (playerChoice == 1 && computerChoice == 3) ||
+    (playerChoice == 2 && computerChoice == 1) ||
+    (playerChoice == 3 && computerChoice == 2)
+  ) 
   
+  {
+    mensagem.textContent = "Você ganhou!";
+    mensagem.style.color = "lime";
+    //Som muito BOM!! YEPIIIII
+    document.getElementById("som-vitoria").play()
+  }
   
+  else 
+  {
+    mensagem.textContent = "Você perdeu!";
+    mensagem.style.color = "red";
+  }
 
-
-
-
-
-
-
-
-
-
-
-
+}
 
 
 
